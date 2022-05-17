@@ -1,158 +1,52 @@
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    background: blue;
+}
+
+.memory-game{
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid lime;
 
 }
 
-section{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-repeat: no-repeat;
-  background-size: cover; 
-
+.memory-card{
+    width: calc(25% - 10px) ;
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    border: 2px solid aqua;
+    transform: scale(1);
 }
 
-
-
-/* CSS */
-.button-74 {
-  background-color: #fbeee0;
-  border: 2px solid #422800;
-  border-radius: 30px;
-  box-shadow: #422800 4px 4px 0 0;
-  color: #422800;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 0 18px;
-  line-height: 50px;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+.front-face,
+.back-face{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border: 2px solid deeppink;
 }
 
-<!-- HTML !-->
-<button class="button-17" role="button">Button 17</button>
+/* animation */
+.memory-card:active{
+    transform: scale(.97);
+    transition: transform .2s;
 
-/* CSS */
-.button-17 {
-  align-items: center;
-  appearance: none;
-  background-color: #fff;
-  border-radius: 24px;
-  border-style: none;
-  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
-  box-sizing: border-box;
-  color: #3c4043;
-  cursor: pointer;
-  display: inline-flex;
-  fill: currentcolor;
-  font-family: "Google Sans",Roboto,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  height: 48px;
-  justify-content: center;
-  letter-spacing: .25px;
-  line-height: normal;
-  max-width: 100%;
-  overflow: visible;
-  padding: 2px 24px;
-  position: relative;
-  text-align: center;
-  text-transform: none;
-  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: auto;
-  will-change: transform,opacity;
-  z-index: 0;
 }
-
- /* button */:root {
-  --border-size: 0.125rem;
-  --duration: 250ms;
-  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
-  --font-family: monospace;
-  --color-primary: white;
-  --color-secondary: black;
-  --color-tertiary: dodgerblue;
-  --shadow: rgba(0, 0, 0, 0.1);
-  --space: 1rem;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  height: 100vh;
-  margin: 0 auto;
-  display: grid;
-  place-items: center;
-  padding: calc(var(--space) * 2);
-  max-width: 700px;
-}
-
-.multi-button {
-  display: flex;
-  width: 100%;
-  box-shadow: var(--shadow) 4px 4px;
-}
-
-.multi-button button {
-  flex-grow: 1;
-  cursor: pointer;
-  position: relative;
-  padding:
-    calc(var(--space) / 1.125)
-    var(--space)
-    var(--space);
-  border: var(--border-size) solid black;
-  color: var(--color-secondary);
-  background-color: var(--color-primary);
-  font-size: 1.5rem;
-  font-family: var(--font-family);
-  text-transform: lowercase;
-  text-shadow: var(--shadow) 2px 2px;
-  transition: flex-grow var(--duration) var(--ease);
-}
-
-.multi-button button + button {
-  border-left: var(--border-size) solid black;
-  margin-left: calc(var(--border-size) * -1);
-}
-
-.multi-button button:hover,
-.multi-button button:focus {
-  flex-grow: 2;
-  color: white;
-  outline: none;
-  text-shadow: none;
-  background-color: var(--color-secondary);
-}
-
-.multi-button button:focus {
-  outline: var(--border-size) dashed var(--color-primary);
-  outline-offset: calc(var(--border-size) * -3);
-}
-
-.multi-button:hover button:focus:not(:hover) {
-  flex-grow: 1;
-  color: var(--color-secondary);
-  background-color: var(--color-primary);
-  outline-color: var(--color-tertiary);
-}
-
-.multi-button button:active {
-  transform: translateY(var(--border-size));
-}
-
