@@ -50,3 +50,7 @@ body{
     transition: transform .2s;
 
 }
+
+.memory-card.flip{
+    transform:180deg ;
+}
