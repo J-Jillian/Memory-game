@@ -37,16 +37,15 @@ const countDown = setInterval(() => {
 timeSecond--;
 displayTime(timeSecond);
 if(timeSecond === 0){
-    gameOver()
+gameOver()
+console.log('gameover');
 }
 if (timeSecond <= 0 || timeSecond < 1){
 clearInterval(countDown)
 }
 }, 1000);
 
-// if(timeSecond === 0){
-//     console.log('hello');
-// }
+
 
 function displayTime(value){
     const sec = parseInt(value, 10); // convert value to number if it's string
@@ -80,8 +79,6 @@ gameoverScreen.style.display = 'flex';
 gameScreen.style.display = 'none';
 timerDiv.style.display ='none';
 timeSecond === 180;
-
-console.log('game over')
 }
 
 //Memory Game
