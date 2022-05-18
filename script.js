@@ -3,14 +3,14 @@ const startScreen = document.getElementById('start-screen');
 const gameScreen = document.getElementById('game-screen');
 const gameoverScreen = document.getElementById('gameover-screen');
 
-
 // Timer
 let element = document.getElementById('timer');
 const timerDiv = document.getElementById('js_timer')
 const timer = document.getElementById('timer')
-let timeSecond = 5;
+let timeSecond = 180;
 
 const cards = document.querySelectorAll('.memory-card');
+const button = document.getElementById('redbutton')
 
 // Functions variables
 let hasFlippedCard = false;
@@ -20,8 +20,10 @@ let firstCard, secondCard;
 
 function startGame(){
 if (gameScreen.style.display === 'none'){
+startTimer()
 gameScreen.style.display = 'flex'
 startScreen.style.display = 'none'
+button.style.visibility = 'hidden'
 timerDiv.style.display ='flex'
 gameoverScreen.style.display = 'none'
 }
@@ -32,7 +34,7 @@ console.log('The game has start');
 // Timer
 
 // displayTime(timeSecond);
-
+function startTimer(){
 const countDown = setInterval(() => {
 timeSecond--;
 displayTime(timeSecond);
@@ -44,35 +46,24 @@ if (timeSecond <= 0 || timeSecond < 1){
 clearInterval(countDown)
 }
 }, 1000);
+}
+
 
 
 
 function displayTime(value){
-    const sec = parseInt(value, 10); // convert value to number if it's string
-    let hours   = Math.floor(sec / 3600); // get hours
-    let minutes = Math.floor((sec - (hours * 3600)) / 60); // get minutes
-    let seconds = sec - (hours * 3600) - (minutes * 60); //  get seconds
-    // add 0 if value < 10; Example: 2 => 02
-    if (hours   < 10) {hours   = "0"+hours;}
-    if (minutes < 10) {minutes = "0"+minutes;}
-    if (seconds < 10) {seconds = "0"+seconds;}
-    timer.innerHTML = minutes+':'+seconds; // Return is HH : MM : SS
-  
+const sec = parseInt(value, 10); // convert value to number if it's string
+let hours   = Math.floor(sec / 3600); // get hours
+let minutes = Math.floor((sec - (hours * 3600)) / 60); // get minutes
+let seconds = sec - (hours * 3600) - (minutes * 60); //  get seconds
+// add 0 if value < 10; Example: 2 => 02
+if (hours   < 10) {hours   = "0"+hours;}
+if (minutes < 10) {minutes = "0"+minutes;}
+if (seconds < 10) {seconds = "0"+seconds;}
+timer.innerHTML = minutes+':'+seconds; // Return is HH : MM : SS
+
 }
 
-// function convertHMS(value) {
-//     const sec = parseInt(value, 10); // convert value to number if it's string
-//     let hours   = Math.floor(sec / 3600); // get hours
-//     let minutes = Math.floor((sec - (hours * 3600)) / 60); // get minutes
-//     let seconds = sec - (hours * 3600) - (minutes * 60); //  get seconds
-//     // add 0 if value < 10; Example: 2 => 02
-//     if (hours   < 10) {hours   = "0"+hours;}
-//     if (minutes < 10) {minutes = "0"+minutes;}
-//     if (seconds < 10) {seconds = "0"+seconds;}
-//     return hours+':'+minutes+':'+seconds; // Return is HH : MM : SS
-// }
-// let time = convertHMS(timeSecond);
-// console.log(time);
 
 function gameOver(){
 gameoverScreen.style.display = 'flex';
