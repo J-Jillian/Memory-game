@@ -7,7 +7,7 @@ const gameoverScreen = document.getElementById('gameover-screen');
 let element = document.getElementById('timer');
 const timerDiv = document.getElementById('js_timer')
 const timer = document.getElementById('timer')
-let timeSecond = 180;
+let timeSecond = 20;
 
 const cards = document.querySelectorAll('.memory-card');
 const button = document.getElementById('redbutton')
