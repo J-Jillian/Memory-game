@@ -12,6 +12,10 @@ let timeSecond = 20;
 const cards = document.querySelectorAll('.memory-card');
 const button = document.getElementById('redbutton')
 
+// music
+let mySound = new Audio('./music/dwtd.mp3')
+
+
 // Functions variables
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -21,6 +25,7 @@ let firstCard, secondCard;
 function startGame(){
 if (gameScreen.style.display === 'none'){
 startTimer()
+mySound.play()
 gameScreen.style.display = 'flex'
 startScreen.style.display = 'none'
 button.style.visibility = 'hidden'

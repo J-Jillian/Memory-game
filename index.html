@@ -4,7 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-<title>Dump ways to die Game</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100;0,800;0,900;1,100;1,300;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<audio id="audio" src="./music/dwtd.mp3"></audio>
+<title>Dumb ways to die Game</title>
 
 
 <link rel="stylesheet" href="style.css" />
@@ -57,28 +61,28 @@
 </div>
 
 <div class="memory-card" data-cardimg="green">
-<img class="front-face" src="./images/card1.jpg">
+<img class="front-face" src="./images/card-test.jpg">
 <img class="back-face" src="./images/card-front.jpg">
 </div>
 
 <div class="memory-card" data-cardimg="brown">
-<img class="front-face" src="./images/card1.jpg">
+<img class="front-face" src="./images/card-test.jpg">
 <img class="back-face" src="./images/card-front.jpg">
 </div>
 
 <div class="memory-card" data-cardimg="brown">
-<img class="front-face" src="./images/card1.jpg">
+<img class="front-face" src="./images/card-test.jpg">
 <img class="back-face" src="./images/card-front.jpg">
 </div>
 
 
 <div class="memory-card" data-cardimg="orange">
-<img class="front-face" src="/images/card1.jpg">
+<img class="front-face" src="/images/card-test.jpg">
 <img class="back-face" src="/images/card-front.jpg">
 </div>
 
 <div class="memory-card" data-cardimg="orange">
-<img class="front-face" src="/images/card1.jpg">
+<img class="front-face" src="/images/card-test.jpg">
 <img class="back-face" src="/images/card-front.jpg">
 </div> 
 
@@ -89,15 +93,23 @@
 
 
 <!-- Start screen -->
-<div id="start-screen" class="screen" style="display:block">
-<h2> "I wonder, what's this red button do?"</h2>
+<div id="start-screen" style="display:block">
+<img class="logo" src="/images/logo-dwtd.png"  alt="">
+<h1 >MEMORY GAME</h1>
+<img src="/images/beans.dancing.webp" alt="">
+<h2> "I WONDER,</h2>
+<h3> what's this red button do?"</h3>
 </div>
 
+<div>
+<img src="" alt="">
 <img src="/images/redbutton.png" id="redbutton" alt="" onclick="startGame()">
+<img src="" alt="">
+</div>
 
 <!-- Game Over Screen -->
-<div id="gameover-screen" class="screen" style="display:none">
-<h2> "Game over"</h2>
+<div id="gameover-screen"  style="display:none">
+<h1>GAME OVER</h1>
 
 </div>
 
