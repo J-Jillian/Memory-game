@@ -10,7 +10,7 @@ body{
 height: 100vh;
 font-family: 'Petrona', serif;
 display: flex;
-background: #E9E0C9;
+background-color: #E9E0C9;
 color: #292929;
 display: flex;
 justify-content: center;
@@ -18,10 +18,17 @@ align-items: center;
 flex-direction: column;
 }
 
+h1{
+font-size: 65px;
+}
 h3{
 font-weight: 100;
 display: flex;
 justify-items: center;
+}
+
+span{
+font-weight: lighter;
 }
 
 .logo{
@@ -36,7 +43,7 @@ display: flex;
 justify-content:space-between;
 align-items: center;
 flex-direction: column;
-padding: 100px;
+padding: 10px;
 }
 
 #redbutton{
@@ -45,15 +52,25 @@ height: auto;
 display: flex;
 }
 
+#resetBtn{
+padding: 10px;
+margin-top: 40px;
+font-family: 'Petrona', serif;
+font-size: medium;
+background-color: #E9E0C9;
+border-radius: 15px; 
+border: 1px solid  #292929;  
+}
+
 .memory-game{
-width: 500px;
+width: 480px;
 height: 700px;
 margin: auto;
 display: flex;
 flex-wrap: wrap;
 perspective: 1000px;
 border-radius: 15px;
-border: 2px solid lime;
+/* border: 2px solid lime; */
 
 }
 
@@ -63,7 +80,7 @@ height: calc(33.333% - 10px);
 margin: 5px;
 position: relative;
 border-radius: 15px;
-border: 2px solid aqua;
+/* border: 2px solid aqua; */
 transform: scale(1);
 transform-style: preserve-3d;
 transition: transform .2s;
@@ -76,7 +93,7 @@ height: 100%;
 /* padding: 20px; */
 position: absolute;
 border-radius: 15px;
-border: 2px solid deeppink;
+/* border: 2px solid deeppink; */
 backface-visibility: hidden;
 }
 
@@ -100,8 +117,12 @@ transform:rotateY(180deg);
 text-align: center;
 }
 #timer{
-background: #fff;
-color: #000;
+background: #FEDA85;
+padding: 10px;
+color: #E77395;
+border-radius:15px;
+font-weight: bold;
+font-size: larger;
 width: 100px;
 margin: 50px auto;
 }

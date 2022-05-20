@@ -2,18 +2,21 @@
 const startScreen = document.getElementById('start-screen');
 const gameScreen = document.getElementById('game-screen');
 const gameoverScreen = document.getElementById('gameover-screen');
+const logo = document.querySelector('.logo');
+const resetBtn =document.querySelector('#resetBtn')
 
 // Timer
 let element = document.getElementById('timer');
 const timerDiv = document.getElementById('js_timer')
 const timer = document.getElementById('timer')
-let timeSecond = 20;
+let timeSecond = 60;
 
 const cards = document.querySelectorAll('.memory-card');
-const button = document.getElementById('redbutton')
+const button = document.getElementById('redbutton');
 
 // music
 let mySound = new Audio('./music/dwtd.mp3')
+let gameOverSound = new Audio('./music/game-over.mp3')
 
 
 // Functions variables
@@ -24,13 +27,15 @@ let firstCard, secondCard;
 
 function startGame(){
 if (gameScreen.style.display === 'none'){
-startTimer()
-mySound.play()
+startTimer();
+mySound.play();
 gameScreen.style.display = 'flex'
 startScreen.style.display = 'none'
 button.style.visibility = 'hidden'
 timerDiv.style.display ='flex'
 gameoverScreen.style.display = 'none'
+logo.style.visibility = 'hidden'
+resetBtn.style.display = 'flex'
 }
 console.log('The game has start');
 }
@@ -74,6 +79,9 @@ function gameOver(){
 gameoverScreen.style.display = 'flex';
 gameScreen.style.display = 'none';
 timerDiv.style.display ='none';
+document.body.style.backgroundColor = "#6E6288";
+mySound.pause();
+gameOverSound.play();
 timeSecond === 180;
 }
 
@@ -135,6 +143,11 @@ card.style.order = randomPos;
 console.log('The cards are shuffled');
 });    
 })()
+
+
+resetBtn.addEventListener("click",() => {
+    location.reload();
+})
 
 cards.forEach(card => card.addEventListener("click", flipCard));
 
