@@ -1,9 +1,26 @@
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-      width: 100%;
-    }
-  }
+@media screen and (max-width: 769px) {
+body{
+padding: 10px;
+}
+h1, h2{
+color:#716B6B;
+}
+
+.dancing{
+height: auto;
+width: 400px;
+}
+
+#game-screen{
+width: 420px;
+height: 450px;
+padding: 8px;
+
+}
+
+}
+
+
 
 *{
 padding: 0;
@@ -25,6 +42,10 @@ flex-direction: column;
 
 h1{
 font-size: 65px;
+color:#716B6B;
+}
+h2{
+color:#716B6B;
 }
 h3{
 font-weight: 100;
@@ -69,15 +90,13 @@ padding: 10px;
 }
 
 .memory-game{
-width: 580px;
+width:580px;
 height: 700px;
 margin: -20px;
-display: flex;
 flex-wrap: wrap;
 perspective: 1000px;
 border-radius: 15px;
 /* border: 2px solid lime; */
-
 }
 
 .memory-card{
