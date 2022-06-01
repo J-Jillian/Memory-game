@@ -16,6 +16,7 @@ const button = document.getElementById('redbutton');
 
 // music
 let mySound = new Audio('./music/dwtd.mp3')
+mySound.volume = 0.2;
 let gameOverSound = new Audio('./music/game-over.mp3')
 
 
@@ -29,6 +30,7 @@ function startGame(){
 if (gameScreen.style.display === 'none'){
 startTimer();
 mySound.play();
+
 gameScreen.style.display = 'flex'
 startScreen.style.display = 'none'
 button.style.visibility = 'hidden'
