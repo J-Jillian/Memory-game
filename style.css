@@ -1,6 +1,6 @@
 @media screen and (max-width: 769px) {
 body{
-padding: 10px;
+
 }
 h1, h2{
 color:#716B6B;
@@ -14,7 +14,7 @@ width: 400px;
 #game-screen{
 width: 420px;
 height: 450px;
-padding: 8px;
+margin-left: 4px;
 
 }
 
